@@ -269,7 +269,6 @@ img {
 .gallery-row {
     display: flex;
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 .gallery-item img {
@@ -299,7 +298,7 @@ img {
     opacity: 1;
 }
 
-.gallery-item.half-width {
+.gallery-item.flex-item {
     flex: 1;
     min-width: 0;
     /* Prevents flex items from overflowing their container */
