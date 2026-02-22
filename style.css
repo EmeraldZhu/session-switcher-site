@@ -260,6 +260,51 @@ img {
     color: var(--secondary-text);
 }
 
+/* See It In Action */
+.see-it-in-action {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.gallery-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-item img {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Soft shadow like other elements */
+    width: 100%;
+    display: block;
+}
+
+.gallery-item.hover-switch {
+    position: relative;
+    border-radius: 16px;
+    isolation: isolate;
+}
+
+.gallery-item.hover-switch .img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.gallery-item.hover-switch:hover .img-hover {
+    opacity: 1;
+}
+
+.gallery-item.half-width {
+    flex: 1;
+    min-width: 0;
+    /* Prevents flex items from overflowing their container */
+}
+
 /* Pricing */
 .pricing {
     padding: 8rem 0;
@@ -521,8 +566,13 @@ img {
 
     .hero-container,
     .feature-grid,
-    .steps-grid {
+    .steps-grid,
+    .gallery-row {
         grid-template-columns: 1fr;
+    }
+
+    .gallery-row {
+        flex-direction: column;
     }
 
     .hero {
